@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aangan Living — Peaceful, India‑Inspired Spaces</title>
+  <meta name="description" content="Curated, India‑inspired rooms you can shop in one click. Authentic stories, respectful provenance, and calming design—crafted with artists we love." />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Visually hidden, focusable */
+    .sr-only-focusable:focus{position:fixed;left:1rem;top:1rem;z-index:9999;background:#0f172a;color:#fff;padding:.5rem .75rem;border-radius:.5rem}
+  </style>
+</head>
+<body class="min-h-screen bg-white text-slate-800">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <circle cx="12" cy="12" r="10" class="fill-emerald-200" />
+            <path d="M7 13c3-6 7-6 10 0" class="stroke-emerald-700" stroke-width="1.5" fill="none" stroke-linecap="round" />
+            <circle cx="12" cy="12" r="2" class="fill-amber-300" />
+          </svg>
+          <span class="font-serif text-xl tracking-wide">Aangan Living</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+          <a class="hover:text-slate-900" href="#rooms">Shop by Space</a>
+          <a class="hover:text-slate-900" href="#artists">Artists</a>
+          <a class="hover:text-slate-900" href="#stories">Stories</a>
+          <a class="hover:text-slate-900" href="#services">Design</a>
+          <a class="hover:text-slate-900" href="#membership">Membership</a>
+        </nav>
+        <div class="hidden md:block">
+          <button id="joinHeader" class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400">Join the Waitlist</button>
+        </div>
+        <button id="menuBtn" aria-label="Open menu" class="md:hidden rounded-lg p-2 hover:bg-slate-100">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobileNav" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-2 text-sm">
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="#rooms">Shop by Space</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="#artists">Artists</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="#stories">Stories</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="#services">Design</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="#membership">Membership</a>
+          <button id="joinHeaderMobile" class="mt-2 w-full rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow hover:bg-slate-800">Join the Waitlist</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section aria-label="Hero" class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-amber-50 via-rose-50 to-emerald-50"></div>
+      <div class="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-emerald-200/40 blur-3xl"></div>
+
+      <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:py-28 lg:px-8">
+        <div>
+          <h1 class="font-serif text-4xl tracking-tight text-slate-900 sm:text-5xl">Bring peace into your home.</h1>
+          <p class="mt-4 max-w-xl text-slate-700">Curated, India-inspired spaces you can shop in one click. Authentic stories, respectful provenance, and calming design—crafted with artists we love.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button data-scroll="#rooms" class="scrollBtn rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400">Shop the Room</button>
+            <button data-scroll="#artists" class="scrollBtn rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50">Meet the Artists</button>
+          </div>
+          <div class="mt-8 flex items-center gap-4 text-xs text-slate-600">
+            <span class="inline-flex items-center gap-1 rounded-full bg-white/80 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M4 13c6 0 10-4 10-10 5 2 6 7 4 10-2 4-6 5-9 5-3 0-5-2-5-5z" fill="currentColor"/></svg> Cultural Respect</span>
+            <span class="inline-flex items-center gap-1 rounded-full bg-white/80 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg> Fair Pay</span>
+            <span class="inline-flex items-center gap-1 rounded-full bg-white/80 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Provenance</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-slate-200">
+            <img src="https://source.unsplash.com/OfYcvP52mto/1600x1200" alt="Serene Indian living room with blue sofa and sunlit window" class="h-full w-full object-cover" loading="eager" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white/90 p-4 shadow-xl ring-1 ring-slate-200 sm:block">
+            <p class="text-xs uppercase tracking-wide text-slate-500">Featured Space</p>
+            <p class="font-medium text-slate-900">Meditation Corner · Signature</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAND -->
+    <section aria-label="Trust" class="border-y border-slate-200 bg-white/60">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-8 sm:grid-cols-3 sm:px-6 lg:px-8">
+        <div class="flex items-start gap-3"><div class="mt-0.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-emerald-500"></div><div><p class="font-medium text-slate-900">Provenance & Story</p><p class="text-sm text-slate-600">Every piece includes origin, materials, and maker notes.</p></div></div>
+        <div class="flex items-start gap-3"><div class="mt-0.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-emerald-500"></div><div><p class="font-medium text-slate-900">Respectful Sourcing</p><p class="text-sm text-slate-600">Fair pay policy and cultural respect statement.</p></div></div>
+        <div class="flex items-start gap-3"><div class="mt-0.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-emerald-500"></div><div><p class="font-medium text-slate-900">Hassle‑Clear Shipping</p><p class="text-sm text-slate-600">Transparent duties & careful packaging standards.</p></div></div>
+      </div>
+    </section>
+
+    <!-- SHOP BY SPACE -->
+    <section id="rooms" aria-label="Shop by Space" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-xs uppercase tracking-wider text-emerald-700">Shop by Space</p>
+        <h2 class="mt-1 font-serif text-2xl text-slate-900 sm:text-3xl">Curated rooms you can add in one click</h2>
+        <p class="mt-2 text-slate-600">Choose a space, then buy the full look or mix & match by price tier.</p>
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg">
+          <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/xisPXJqwQkA/1600x1200" alt="Meditation corner with diya and rug" class="h-full w-full object-cover transition duration-300 group-hover:scale-105"/></div>
+          <div class="p-4">
+            <h3 class="font-medium text-slate-900">Meditation Corner</h3>
+            <p class="mt-1 text-sm text-slate-600">Brass diya, handwoven rug, grounding sculpture, and soft lamp—available as a bundle.</p>
+            <div class="mt-4 flex gap-2">
+              <button data-room="meditation" class="openRoom rounded-lg bg-slate-900 px-3 py-2 text-xs font-medium text-white hover:bg-slate-800">View Room</button>
+              <a href="#" class="rounded-lg border border-slate-300 px-3 py-2 text-xs font-medium text-slate-900 hover:bg-slate-50">Learn More</a>
+            </div>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg">
+          <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/-_HcP7vtW70/1600x1200" alt="Serene living room with Indian motifs" class="h-full w-full object-cover transition duration-300 group-hover:scale-105"/></div>
+          <div class="p-4">
+            <h3 class="font-medium text-slate-900">Serene Living Room</h3>
+            <p class="mt-1 text-sm text-slate-600">Lotus & lattice motifs blended with contemporary lines.</p>
+            <div class="mt-4 flex gap-2">
+              <button data-room="living" class="openRoom rounded-lg bg-slate-900 px-3 py-2 text-xs font-medium text-white hover:bg-slate-800">View Room</button>
+              <a href="#" class="rounded-lg border border-slate-300 px-3 py-2 text-xs font-medium text-slate-900 hover:bg-slate-50">Learn More</a>
+            </div>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg">
+          <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/80NXMVcK7GI/1600x1200" alt="Study nook with desk and soft textiles" class="h-full w-full object-cover transition duration-300 group-hover:scale-105"/></div>
+          <div class="p-4">
+            <h3 class="font-medium text-slate-900">Sacred Study Nook</h3>
+            <p class="mt-1 text-sm text-slate-600">Quiet desk altar, scripture stand, and calming textiles.</p>
+            <div class="mt-4 flex gap-2">
+              <button data-room="study" class="openRoom rounded-lg bg-slate-900 px-3 py-2 text-xs font-medium text-white hover:bg-slate-800">View Room</button>
+              <a href="#" class="rounded-lg border border-slate-300 px-3 py-2 text-xs font-medium text-slate-900 hover:bg-slate-50">Learn More</a>
+            </div>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg">
+          <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/kzwWwsDUvas/1600x1200" alt="Tranquil bedroom with neutral palette" class="h-full w-full object-cover transition duration-300 group-hover:scale-105"/></div>
+          <div class="p-4">
+            <h3 class="font-medium text-slate-900">Tranquil Bedroom</h3>
+            <p class="mt-1 text-sm text-slate-600">Sage palette, natural fibers, hand‑block prints.</p>
+            <div class="mt-4 flex gap-2">
+              <button data-room="bedroom" class="openRoom rounded-lg bg-slate-900 px-3 py-2 text-xs font-medium text-white hover:bg-slate-800">View Room</button>
+              <a href="#" class="rounded-lg border border-slate-300 px-3 py-2 text-xs font-medium text-slate-900 hover:bg-slate-50">Learn More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARTISTS -->
+    <section id="artists" aria-label="Artists" class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-xs uppercase tracking-wider text-emerald-700">Meet the Artists</p>
+          <h2 class="mt-1 font-serif text-2xl text-slate-900 sm:text-3xl">Real makers. Real stories.</h2>
+          <p class="mt-2 text-slate-600">Every purchase supports skilled craftspeople and preserves heritage.</p>
+        </div>
+        <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/Bg7GIRxJszM/1600x1200" alt="Painter at work in Jaipur" class="h-full w-full object-cover"/></div>
+            <div class="p-5"><h3 class="font-medium text-slate-900">Aarti · Jaipur</h3><p class="text-sm text-slate-600">Miniature Painter</p><p class="mt-2 text-sm text-slate-700">Reviving gharana techniques with natural pigments; each piece includes a provenance card.</p><div class="mt-4"><a href="#" class="text-sm font-medium text-slate-900 underline underline-offset-4 hover:no-underline">Watch the short film</a></div></div>
+          </article>
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/XCd_6nOdzjo/1600x1200" alt="Handloom weaver from Kutch" class="h-full w-full object-cover"/></div>
+            <div class="p-5"><h3 class="font-medium text-slate-900">Rahul · Kutch</h3><p class="text-sm text-slate-600">Handloom Weaver</p><p class="mt-2 text-sm text-slate-700">Textiles woven in small batches on pit looms—patterns inspired by monsoon clouds.</p><div class="mt-4"><a href="#" class="text-sm font-medium text-slate-900 underline underline-offset-4 hover:no-underline">Watch the short film</a></div></div>
+          </article>
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div class="aspect-[4/3] overflow-hidden"><img src="https://source.unsplash.com/tJDWeY2zB4c/1600x1200" alt="Metal artisan in Uttar Pradesh workshop" class="h-full w-full object-cover"/></div>
+            <div class="p-5"><h3 class="font-medium text-slate-900">Iqbal · Uttar Pradesh</h3><p class="text-sm text-slate-600">Metal Artisan</p><p class="mt-2 text-sm text-slate-700">Lost‑wax brass that ages to a warm patina; packaged with care and a maker note.</p><div class="mt-4"><a href="#" class="text-sm font-medium text-slate-900 underline underline-offset-4 hover:no-underline">Watch the short film</a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIES -->
+    <section id="stories" aria-label="Stories & Journal" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-xs uppercase tracking-wider text-emerald-700">Stories</p>
+        <h2 class="mt-1 font-serif text-2xl text-slate-900 sm:text-3xl">Calm is a practice</h2>
+        <p class="mt-2 text-slate-600">We pair design with meaning—read, watch, and learn.</p>
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><span class="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">Guide</span><h3 class="mt-3 font-medium text-slate-900">How to design a meditation corner</h3><p class="mt-1 text-sm text-slate-600">Five calming principles drawn from Indian interiors.</p><a href="#" class="mt-4 inline-block text-sm font-medium text-slate-900 underline underline-offset-4">Read more</a></article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><span class="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">Values</span><h3 class="mt-3 font-medium text-slate-900">Provenance: what it means to us</h3><p class="mt-1 text-sm text-slate-600">Why every piece ships with a maker note and origin.</p><a href="#" class="mt-4 inline-block text-sm font-medium text-slate-900 underline underline-offset-4">Read more</a></article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><span class="inline-flex items-center rounded-full bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">Culture</span><h3 class="mt-3 font-medium text-slate-900">Lotus & lattice: motifs decoded</h3><p class="mt-1 text-sm text-slate-600">A short primer on patterns and meaning.</p><a href="#" class="mt-4 inline-block text-sm font-medium text-slate-900 underline underline-offset-4">Read more</a></article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-label="Design Services" class="bg-gradient-to-br from-emerald-50 to-amber-50">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="max-w-2xl"><p class="text-xs uppercase tracking-wider text-emerald-700">Design Services</p><h2 class="mt-1 font-serif text-2xl text-slate-900 sm:text-3xl">Need a hand creating your peaceful space?</h2><p class="mt-2 text-slate-600">Work 1:1 with our designer to craft a room that breathes.</p></div>
+        <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div class="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><div class="flex items-baseline justify-between"><h3 class="font-medium text-slate-900">Virtual Consult</h3><p class="text-lg font-semibold text-slate-900">$149</p></div><ul class="mt-4 space-y-2 text-sm text-slate-700"><li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>30‑min video consult</li><li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Room moodboard</li><li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Shopping list & links</li></ul><div class="mt-6"><a href="#" class="inline-flex items-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Book a consult</a></div></div>
+          <div class="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><div class="flex items-baseline justify-between"><h3 class="font-medium text-slate-900">Full Room Plan</h3><p class="text-lg font-semibold text-slate-900">$499</p></div><ul class="mt-4 space-y-2 text-sm text-slate-700"><li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>60‑min consult</li><li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Scaled layout</li><li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3D concept + full bundle</li></ul><div class="mt-6"><a href="#" class="inline-flex items-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Book a consult</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP CTA -->
+    <section id="membership" aria-label="Membership" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-slate-200 bg-slate-900 p-8 text-white shadow-sm">
+        <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-3">
+          <div class="lg:col-span-2">
+            <h3 class="font-serif text-2xl">Circle of Peace — Members</h3>
+            <p class="mt-2 text-slate-100">Early access to drops, 10% off bundles, quarterly styling workshop, and behind‑the‑scenes artist films.</p>
+          </div>
+          <div class="flex lg:justify-end">
+            <a href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50">Join for $99/year</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">* We publish a Cultural Respect & Provenance statement—read it in the footer.</div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" aria-label="Newsletter" class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="max-w-2xl"><p class="text-xs uppercase tracking-wider text-emerald-700">Stay in the loop</p><h2 class="mt-1 font-serif text-2xl text-slate-900 sm:text-3xl">Be first to know about new rooms & artist films</h2><p class="mt-2 text-slate-600">We send thoughtful emails—no noise, only calm.</p></div>
+        <form id="waitlistForm" class="mt-6 max-w-xl">
+          <div class="flex w-full items-center overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
+            <input type="email" id="emailInput" required placeholder="you@example.com" class="w-full px-4 py-3 text-sm outline-none" aria-label="Email address" />
+            <button type="submit" class="h-full shrink-0 rounded-none bg-slate-900 px-4 py-3 text-sm font-medium text-white hover:bg-slate-800">Join</button>
+          </div>
+          <p class="mt-2 text-xs text-slate-500">By joining, you agree to our Privacy Policy.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" class="fill-emerald-200" />
+              <path d="M7 13c3-6 7-6 10 0" class="stroke-emerald-700" stroke-width="1.5" fill="none" stroke-linecap="round" />
+              <circle cx="12" cy="12" r="2" class="fill-amber-300" />
+            </svg>
+            <span class="font-serif text-lg">Aangan Living</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Curated, India‑inspired interiors that bring calm home.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-slate-900">Explore</h4>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li><a class="hover:text-slate-900" href="#rooms">Shop by Space</a></li>
+            <li><a class="hover:text-slate-900" href="#artists">Artists</a></li>
+            <li><a class="hover:text-slate-900" href="#stories">Stories</a></li>
+            <li><a class="hover:text-slate-900" href="#services">Design Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-slate-900">Company</h4>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li><a class="hover:text-slate-900" href="#membership">Membership</a></li>
+            <li><a class="hover:text-slate-900" href="#">About</a></li>
+            <li><a class="hover:text-slate-900" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-slate-900">Policies</h4>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li><a class="hover:text-slate-900" href="#">Cultural Respect & Provenance</a></li>
+            <li><a class="hover:text-slate-900" href="#">Shipping & Returns</a></li>
+            <li><a class="hover:text-slate-900" href="#">Terms & Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-slate-500">© <span id="year"></span> Aangan Living. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ROOM MODAL -->
+  <div id="roomModal" class="fixed inset-0 z-50 hidden items-end justify-center bg-black/40 p-4 sm:items-center">
+    <div class="w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-slate-200">
+      <div class="flex items-center justify-between border-b border-slate-200 p-4">
+        <h3 id="modalTitle" class="font-medium text-slate-900">Room · Signature</h3>
+        <button id="modalClose" aria-label="Close" class="rounded-lg p-2 hover:bg-slate-50">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="grid gap-4 p-4 sm:grid-cols-2">
+        <div id="modalItems" class="space-y-2"></div>
+        <div class="rounded-2xl bg-slate-50 p-4">
+          <h4 class="font-medium text-slate-900">Bundle Summary</h4>
+          <p class="mt-1 text-sm text-slate-600">Swap items later on the full product page. Shipping & duties shown at checkout.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-sm text-slate-700">Subtotal</span>
+            <span id="modalSubtotal" class="text-lg font-semibold text-slate-900">$0</span>
+          </div>
+          <div class="mt-6 grid gap-2">
+            <a href="#" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-3 text-sm font-medium text-white hover:bg-slate-800">Add entire room</a>
+            <a href="#" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50">View all items</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-slate-200 p-4 text-xs text-slate-500">Provenance card & care guide included.</div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" role="status" aria-live="polite" class="fixed inset-x-0 top-20 z-50 mx-auto hidden w-fit rounded-xl bg-slate-900 px-4 py-2 text-sm text-white shadow-lg"></div>
+
+  <script>
+    // Smooth scroll buttons
+    document.querySelectorAll('.scrollBtn').forEach(btn => btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-scroll');
+      const el = document.querySelector(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }));
+
+    // Join waitlist scroll
+    const joinHeader = document.getElementById('joinHeader');
+    const joinHeaderMobile = document.getElementById('joinHeaderMobile');
+    [joinHeader, joinHeaderMobile].forEach(b => b && b.addEventListener('click', () => {
+      document.getElementById('newsletter').scrollIntoView({ behavior: 'smooth' });
+    }));
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Room modal data
+    const catalog = {
+      meditation: [
+        { name: 'Brass Diya', price: 45 },
+        { name: 'Handwoven Rug', price: 160 },
+        { name: 'Grounding Sculpture', price: 120 },
+        { name: 'Soft Lamp', price: 75 },
+      ],
+      living: [
+        { name: 'Lattice Cushion Set', price: 98 },
+        { name: 'Block‑print Throw', price: 85 },
+        { name: 'Lotus Wall Art', price: 180 },
+        { name: 'Low Accent Table', price: 140 },
+      ],
+      study: [
+        { name: 'Scripture Stand', price: 65 },
+        { name: 'Calm Desk Lamp', price: 70 },
+        { name: 'Mini Rug', price: 90 },
+        { name: 'Incense Holder', price: 28 },
+      ],
+      bedroom: [
+        { name: 'Sage Quilt', price: 140 },
+        { name: 'Hand‑block Pillowcases', price: 56 },
+        { name: 'Brass Bedside Bowl', price: 32 },
+        { name: 'Soft‑glow Lamp', price: 74 },
+      ],
+    };
+
+    const modal = document.getElementById('roomModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalItems = document.getElementById('modalItems');
+    const modalSubtotal = document.getElementById('modalSubtotal');
+
+    function titleFor(key){
+      return key === 'meditation' ? 'Meditation Corner' :
+             key === 'living' ? 'Serene Living Room' :
+             key === 'study' ? 'Sacred Study Nook' :
+             'Tranquil Bedroom';
+    }
+
+    function currency(num){ return '$' + num.toFixed(0); }
+
+    function openRoom(key){
+      const items = catalog[key];
+      modalTitle.textContent = titleFor(key) + ' · Signature';
+      modalItems.innerHTML = '';
+      let subtotal = 0;
+      items.forEach(it => {
+        subtotal += it.price;
+        const row = document.createElement('div');
+        row.className = 'flex items-center justify-between rounded-xl border border-slate-200 p-3';
+        row.innerHTML = `<span class="text-sm text-slate-800">${it.name}</span><span class="text-sm font-medium text-slate-900">${currency(it.price)}</span>`;
+        modalItems.appendChild(row);
+      });
+      modalSubtotal.textContent = currency(subtotal);
+      modal.classList.remove('hidden');
+    }
+
+    document.querySelectorAll('.openRoom').forEach(btn => btn.addEventListener('click', () => {
+      openRoom(btn.getAttribute('data-room'));
+    }));
+
+    document.getElementById('modalClose').addEventListener('click', () => modal.classList.add('hidden'));
+    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.classList.add('hidden'); });
+
+    // Waitlist form (dummy toast; wire to your backend later)
+    const form = document.getElementById('waitlistForm');
+    const emailInput = document.getElementById('emailInput');
+    const toast = document.getElementById('toast');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if(!ok){ showToast('Please enter a valid email.'); return; }
+      emailInput.value='';
+      showToast("You're on the list. We'll be in touch soon ✨");
+      // TODO: POST to your email provider endpoint
+    });
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 4000);
+    }
+  </script>
+</body>
+</html>
